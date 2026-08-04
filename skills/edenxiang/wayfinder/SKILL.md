@@ -1,7 +1,6 @@
 ---
 name: wayfinder
 description: Plan a huge chunk of work — more than one agent session can hold — as a shared map of decision tickets on the local .scratch tracker, and resolve them one at a time until the way to the destination is clear.
-disable-model-invocation: true
 ---
 
 > **EdenXiang fork:** this skill runs on the **local `.scratch/` tracker** (see `/xhon-workflows` → [wayfinder-git](../xhon-workflows/references/wayfinder-git.md) — every effort lives under `.scratch/<map-slug>/` on its own `feature/<map-slug>` branch). Invoke `/xhon-workflows` first; it loads the branching strategy, the `.scratch/` layout, and the quality standards this skill applies. The tracker is configured by `/setup-matt-pocock-skills` and fixed to local markdown — no GitHub issues.

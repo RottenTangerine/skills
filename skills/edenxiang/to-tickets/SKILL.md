@@ -1,7 +1,6 @@
 ---
 name: to-tickets
 description: Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the local .scratch tracker — one file per ticket under the effort's implements/ directory.
-disable-model-invocation: true
 ---
 
 > **EdenXiang fork:** invoke `/xhon-workflows` first (its [wayfinder-git](../xhon-workflows/references/wayfinder-git.md) reference defines the output location). This skill publishes to the **local `.scratch/` tracker** — implement tickets go to `.scratch/<map-slug>/implements/NN-<slug>.md` (NOT `issues/`, which is reserved for wayfinder decision tickets). Run on the effort's `feature/<map-slug>` branch.

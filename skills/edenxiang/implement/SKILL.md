@@ -1,7 +1,6 @@
 ---
 name: implement
 description: "Implement a piece of work based on a spec or set of tickets, in a worktree-isolated session, merged back to the effort's feature branch."
-disable-model-invocation: true
 ---
 
 > **EdenXiang fork:** invoke `/xhon-workflows` first (its [wayfinder-git](../xhon-workflows/references/wayfinder-git.md) and [branching](../xhon-workflows/references/branching.md) references define the branch model and worktree lifecycle). This skill runs each implement ticket in its own **worktree** on a local-only `worktree-ticket-<n>` branch, then merges back to the effort's `feature/<map-slug>` branch. See "Worktree isolation" below.

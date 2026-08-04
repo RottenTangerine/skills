@@ -1,7 +1,6 @@
 ---
 name: triage
 description: Move issues through a state machine of triage roles on the local .scratch tracker — categorise, verify, grill if needed, and write agent-ready briefs.
-disable-model-invocation: true
 ---
 
 > **EdenXiang fork:** this skill runs on the **local `.scratch/` tracker** — issues are markdown files, and triage state is a `Status:` line in each file (no GitHub labels, no PRs). Invoke `/xhon-workflows` first; its [wayfinder-git](../xhon-workflows/references/wayfinder-git.md) reference defines the tracker layout this skill operates on.

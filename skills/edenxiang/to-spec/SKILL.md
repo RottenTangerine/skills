@@ -1,7 +1,6 @@
 ---
 name: to-spec
 description: Turn the current conversation into a spec and publish it to the local .scratch tracker — no interview, just synthesis of what you've already discussed.
-disable-model-invocation: true
 ---
 
 > **EdenXiang fork:** invoke `/xhon-workflows` first (its [wayfinder-git](../xhon-workflows/references/wayfinder-git.md) reference defines where the spec lands). This skill runs on the **local `.scratch/` tracker** — the spec is written to `.scratch/<map-slug>/spec.md` on the effort's `feature/<map-slug>` branch. No GitHub issues.

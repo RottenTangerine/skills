@@ -22,6 +22,18 @@
 | code-review | `2ab9580` | spec 来源优先 `.scratch/<map-slug>/spec.md`；质量标准引用；去 GitHub 依赖 | 本地化 spec 来源 | 上游若改 spec 查找顺序，需重放 | `2ab9580` |
 | resolving-merge-conflicts | `2ab9580` | 融合分支模型（ticket→feature 冲突以 wayfinder 决策记录为唯一依据；feature→dev/dev→main 报告用户）；引用 xhon-workflows | 分支模型融合 | 上游若改冲突解决流程，需重放 | `2ab9580` |
 | triage | `2ab9580` | 本地版：`Status:`/`Type:` 行状态机，无 GitHub labels/PRs；`## Triage Notes` 追加到文件 | 本地化状态机 | 上游若改 triage 角色/流程，需重放 | `2ab9580` |
+| ask-matt | `2ab9580` | 原版复制，未魔改 | 插件独立 | 无 | `2ab9580` |
+| diagnosing-bugs | `2ab9580` | 原版复制，未魔改 | 插件独立 | 无 | `2ab9580` |
+| improve-codebase-architecture | `2ab9580` | 原版复制，未魔改 | 插件独立 | 无 | `2ab9580` |
+| tdd | `2ab9580` | 原版复制，未魔改 | 插件独立 | 无 | `2ab9580` |
+| prototype | `2ab9580` | 原版复制，未魔改 | 插件独立 | 无 | `2ab9580` |
+| research | `2ab9580` | 原版复制，未魔改 | 插件独立 | 无 | `2ab9580` |
+| domain-modeling | `2ab9580` | 原版复制，未魔改 | 插件独立 | 无 | `2ab9580` |
+| codebase-design | `2ab9580` | 原版复制，未魔改 | 插件独立 | 无 | `2ab9580` |
+| grill-me | `2ab9580` | 原版复制，未魔改 | 插件独立 | 无 | `2ab9580` |
+| handoff | `2ab9580` | 原版复制，未魔改 | 插件独立 | 无 | `2ab9580` |
+| teach | `2ab9580` | 原版复制，未魔改 | 插件独立 | 无 | `2ab9580` |
+| writing-great-skills | `2ab9580` | 原版复制，未魔改 | 插件独立 | 无 | `2ab9580` |
 | xhon-workflows | 自创（无上游来源） | 策略 skill：branching（main←dev←feature/*、分支计划、merge 流程、.scratch 排除）、wayfinder-git（.scratch 布局、implements/ 独立）、quality-standards（6 点格式、质量标准） | 自创策略层 | — | — |
 
 ## 同步适配流程
