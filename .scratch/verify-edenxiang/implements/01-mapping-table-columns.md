@@ -6,7 +6,7 @@
 
 **Blocked by:** None — can start immediately
 
-**Status:** ready-for-agent
+**Status:** done
 
 - [ ] 映射表头加「魔改原因」「适配关注点」两列
 - [ ] 每行填充两列内容（一行短句 + 上游关注点）
