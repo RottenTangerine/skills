@@ -6,6 +6,7 @@ Skills are organized into bucket folders under `skills/`:
 - `personal/` — tied to my own setup, not promoted
 - `in-progress/` — drafts not yet ready to ship
 - `deprecated/` — no longer used
+- `edenxiang/` — my personal modifications of upstream skills. Fork-specific. When a skill exists both here and in a regular bucket (same directory name), the `edenxiang` copy wins at link time: `scripts/link-skills.sh` links `edenxiang/` skills first and skips the original, and `.claude-plugin/plugin.json`'s `skills` array points at the `edenxiang` path (the original file stays in the repo for upstream sync comparison). **Never edit a skill in its original bucket to customize it — copy it into `edenxiang/` first.** Self-created skills with no upstream counterpart (e.g. `xhon-workflows`, the policy skill) live here too; they are NOT in `plugin.json` — they take effect via `link-skills.sh` only. New skills added to `edenxiang/` must update the mapping table in `skills/edenxiang/README.md`. After rebasing `edenxiang` onto new upstream `main`, re-check each modified skill against upstream's `.changeset/` changes and update the table's "last-checked" column.
 
 Every skill in `engineering/` or `productivity/` (the **promoted** buckets) must have a reference in the top-level `README.md` and an entry in `.claude-plugin/plugin.json`'s `skills` array (the Claude Code plugin ships exactly the promoted set). Skills in `misc/`, `personal/`, `in-progress/`, and `deprecated/` must not appear in either.
 
