@@ -1,10 +1,10 @@
 {
-  "name": "mattpocock-skills",
+  "name": "edenxiang-skills",
   "version": "1.2.0",
-  "description": "Matt Pocock's agent skills for real engineering — grilling, spec/ticket flows, TDD, code review, domain modelling and more. Plug-and-play, not vibe coding.",
+  "description": "EdenXiang's agent skills — a fork of Matt Pocock's skills for real engineering, adapted to a local .scratch tracker, a main←dev←feature/* branch model, and fully automated workflows. Plug-and-play, not vibe coding.",
   "author": {
-    "name": "Matt Pocock",
-    "url": "https://www.aihero.dev"
+    "name": "EdenXiang",
+    "url": "https://github.com/RottenTangerine"
   },
   "homepage": "https://www.aihero.dev/s/skills-newsletter",
   "repository": "https://github.com/mattpocock/skills",
@@ -16,7 +16,9 @@
     "code-review",
     "grilling",
     "domain-modeling",
-    "productivity"
+    "productivity",
+    "butler",
+    "wayfinder"
   ],
   "skills": [
     "./skills/edenxiang/ask-matt",
@@ -41,6 +43,7 @@
     "./skills/edenxiang/grilling",
     "./skills/edenxiang/handoff",
     "./skills/edenxiang/teach",
-    "./skills/edenxiang/writing-great-skills"
+    "./skills/edenxiang/writing-great-skills",
+    "./skills/edenxiang/xhon-workflows"
   ]
 }

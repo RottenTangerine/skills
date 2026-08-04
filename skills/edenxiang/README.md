@@ -1,6 +1,6 @@
 # Edenxiang（个人魔改区）
 
-本目录存放从上游复制出来、由我（EdenXiang）自行修改的 skill。**不随插件发布，不进入顶层 `README.md` 推广列表** —— 只通过 `scripts/link-skills.sh` 链接进本地 Claude Code / Codex 使用。
+本目录存放从上游复制出来、由我（EdenXiang）自行修改的 skill，以及自创 skill。**随插件发布**（`.claude-plugin/plugin.json` 的 `skills` 数组全部指向本目录），也通过 `scripts/link-skills.sh` 链接进本地 Claude Code / Codex 使用。
 
 ## 为什么需要这个目录
 
@@ -49,5 +49,5 @@
 
 ## 注意
 
-- 本目录的 skill 不加入 `.claude-plugin/plugin.json`、不加入顶层 `README.md`、不加入 `docs/`（与 `misc/`、`personal/` 等非推广 bucket 一致）
+- 本目录的 skill 全部加入 `.claude-plugin/plugin.json`（魔改版路径替换原版；自创 skill 直接加入），不加入 `docs/`（与 `misc/`、`personal/` 等非推广 bucket 一致）
 - 复制某个 skill 进来时，记得同步更新上表
