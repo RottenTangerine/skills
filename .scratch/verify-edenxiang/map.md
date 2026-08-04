@@ -18,3 +18,8 @@
 ## 流程
 
 按魔改后的 skill 逐步执行，验证每个环节的输出位置和格式。
+
+## Decisions so far
+
+- [01 — mapping-table-column](./issues/01-mapping-table-column.md) — 映射表加「魔改原因」+「适配关注点」两列，一行短句粒度
+
