@@ -61,9 +61,9 @@ rebase 后按 [skills/edenxiang/README.md](./skills/edenxiang/README.md) 中的�
 个人魔改 skill 存放目录，见 [skills/edenxiang/README.md](./skills/edenxiang/README.md)。当前包含 11 个 skill：
 
 - **魔改原版**（10 个）：`wayfinder`、`to-spec`、`to-tickets`、`implement`、`setup-matt-pocock-skills`、`grilling`、`grill-with-docs`、`code-review`、`resolving-merge-conflicts`、`triage`
-- **自创**（1 个）：`xhon-workflows` — 策略 skill（分支模型、.scratch 布局、质量标准），被上述魔改 skill 正文引用
+- **自创**（2 个）：`xhon-workflows`（策略 skill：分支模型、.scratch 布局、质量标准）、`butler`（单次全自动执行器：`/butler work on <map-slug>` → 决策票波次 fanout → 整体审查 → spec → tickets → implement workflow）
 
-核心变化：本地 `.scratch/` tracker 固定实现（无 GitHub issues）、`main ← dev ← feature/*` 分支模型（所有分支操作走分支计划+确认）、implement 带 worktree 隔离、triage 本地化。
+核心变化：本地 `.scratch/` tracker 固定实现（无 GitHub issues）、`main ← dev ← feature/*` 分支模型（所有分支操作走分支计划+确认）、implement 带 worktree 隔离、triage 本地化、butler 全自动编排。
 
 ### 5. `.claude-plugin/plugin.json`
 

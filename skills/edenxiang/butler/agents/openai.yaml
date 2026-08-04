@@ -1,0 +1,3 @@
+interface:
+  display_name: "Butler"
+  short_description: "Fully automate a wayfinder effort from map to implementation"

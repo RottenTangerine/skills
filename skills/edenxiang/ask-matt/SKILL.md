@@ -14,12 +14,11 @@ A **flow** is a path through the skills. Most paths run along one **main flow**,
 The route most work travels. You have an idea and want it built.
 
 1. **`/grill-with-docs`** — sharpen the idea by interview. Start here when you **have a codebase**: it's stateful, retaining what it learns in `CONTEXT.md` and ADRs. (No codebase? Use `/grill-me` — see Standalone. Both run the same `/grilling` primitive; `grill-with-docs` is the one that leaves a paper trail.)
-2. **Branch — can you settle every question in conversation?** If a question needs a runnable answer (state, business logic, a UI you have to see), detour through a prototype, bridged by **`/handoff`** in both directions (see Crossing sessions):
-   - **`/handoff`** out, then open a fresh session against that file,
-   - **`/prototype`** to answer the question with throwaway code,
-   - **`/handoff`** back what you learned, and reference it from the original idea thread.
+2. **Branch — is this a multi-session build that needs planning?**
+   - **Yes** → **`/wayfinder`** to chart the effort as a map of decision tickets, then **`/butler work on <map-slug>`** — the automated executor resolves every decision ticket (waves of parallel subagents, surfacing only what genuinely needs you), reviews the map, writes the spec, breaks it into implement tickets, and runs the implementation to completion.
+   - **No** → **`/implement`** right here, in the same context window.
 3. **Branch — is this a multi-session build?**
-   - **Yes** → **`/to-spec`** (turn the thread into a spec), then **`/to-tickets`** to split it into tracer-bullet tickets, each declaring its **blocking edges**. On the local tracker that's one file per ticket under `.scratch/<map-slug>/implements/`, worked blockers-first by hand — kick off **`/implement`** per ticket, **clearing context between each one**.
+   - **Yes** → **`/to-spec`** (turn the thread into a spec), then **`/to-tickets`** to split it into tracer-bullet tickets, each declaring its **blocking edges**. On the local tracker that's one file per ticket under `.scratch/<map-slug>/implements/`, worked blockers-first by hand — kick off **`/implement`** per ticket, **clearing context between each one**. For the automated path, `/butler work on <map-slug>` does spec + tickets + implement in one invocation.
    - **No** → **`/implement`** right here, in the same context window.
 
    Either way, **`/implement`** builds each issue by driving **`/tdd`** internally — one red-green slice at a time — then closes out by running **`/code-review`**, a two-axis review (Standards + Spec) of the diff, before committing. Reach for **`/tdd`** on its own when you just want to build a concrete behaviour test-first without a full spec, and **`/code-review`** on its own whenever you want to review a branch or PR against a fixed point.
