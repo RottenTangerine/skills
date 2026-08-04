@@ -26,7 +26,7 @@ All feature branches originate from `dev`.
 ## Session start
 
 At the start of every session that involves code changes, evaluate the current branch and the work ahead:
-- If this is an independent feature/fix, create a new `feature/<slug>` branch from `dev`
+- If this is an independent feature/fix, create a new `feature/<map-slug>` branch from `dev`
 - If continuing work on the current branch, stay put
 - If currently on `main` or `dev`, switch to a new branch before making any changes
 
@@ -58,7 +58,7 @@ git branch -D
 - **Delete source branch after completion:** <yes/no — ask user>
 ```
 
-Only **one branch operation per plan**. If multiple branches need to be created or merged (e.g., create `dev`, then create `feature/<slug>` from `dev`), present them as separate plans — confirm and execute each one before presenting the next.
+Only **one branch operation per plan**. If multiple branches need to be created or merged (e.g., create `dev`, then create `feature/<map-slug>` from `dev`), present them as separate plans — confirm and execute each one before presenting the next.
 
 Then **wait for the user to confirm** before running any command. Do NOT execute without confirmation.
 
@@ -96,7 +96,7 @@ When a feature is complete and ready to integrate:
 1. Output the branch plan (merge variant)
 2. After user confirms:
    - `git checkout dev && git pull origin dev` (ensure dev is current — `pull.ff only` updates without creating a merge commit)
-   - `git merge <feature-branch>` — the default `Merge branch 'feature/<slug>'` message carries enough info (the slug identifies the feature)
+   - `git merge <feature-branch>` — the default `Merge branch 'feature/<map-slug>'` message carries enough info (the slug identifies the feature)
    - Resolve any conflicts — if conflicts arise, pause and report each one
 3. Ask the user: **"Delete `<feature-branch>` now?"** — never delete without asking
 4. If yes: `git branch -d <feature-branch>` (use `-d`, not `-D` — refuse to force-delete if the branch isn't fully merged)
@@ -116,4 +116,4 @@ When `dev` has accumulated one or more completed features and is ready to ship:
 4. Ask the user: **"Push `main`?"** — never push without asking
 5. After merging, `git checkout dev` to continue work from the integration branch (`.scratch/` re-materializes on dev)
 
-`.scratch/` is tracked on `feature/*` and `dev` (effort state: map, spec, tickets, workflow.js) but is excluded from `main` at this hop. `prototype/` and `worktrees/` under `.scratch/` are gitignored everywhere and never reach any branch. If this exclusion is ever forgotten, `.scratch/` lands on `main`; clean it up via a `feature/cleanup` branch (remove it, merge to `dev`, then a dev→main merge with the exclusion applied).
+`.scratch/` is tracked on `feature/*` and `dev` (effort state: map, spec, tickets) but is excluded from `main` at this hop. `prototype/` and `worktrees/` under `.scratch/` are gitignored everywhere and never reach any branch. If this exclusion is ever forgotten, `.scratch/` lands on `main`; clean it up via a `feature/cleanup` branch (remove it, merge to `dev`, then a dev→main merge with the exclusion applied).

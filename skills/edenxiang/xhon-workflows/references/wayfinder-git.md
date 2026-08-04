@@ -10,6 +10,7 @@ Every wayfinder effort is a **local markdown effort** under `.scratch/<map-slug>
 └── <map-slug>/              # active effort
     ├── issues/              # wayfinder decision tickets: NN-<slug>.md (map's children)
     ├── implements/          # implement tickets from /to-tickets: NN-<slug>.md
+    ├── research/            # research findings: <topic>.md (from /research)
     ├── map.md               # the wayfinder map
     ├── spec.md              # the spec (from /to-spec)
     ├── prototype/           # gitignored — prototype worktrees (never committed)
@@ -23,7 +24,7 @@ Every wayfinder effort is a **local markdown effort** under `.scratch/<map-slug>
 ## Map creation (wayfinder chart)
 
 1. Create `feature/<map-slug>` from `dev` — output a branch plan, wait for confirmation. **If the branch already exists** (e.g. created in an earlier session) and you are already on it, skip creation — no branch plan — and continue from step 2.
-2. Ensure the effort directory exists: `mkdir -p .scratch/<map-slug>/{issues,implements,prototype,worktrees}`.
+2. Ensure the effort directory exists: `mkdir -p .scratch/<map-slug>/{issues,implements,research,prototype,worktrees}`.
 3. Record the branch name in the map's `## Notes`: `Branch: feature/<map-slug>`
 4. Chart the map to `.scratch/<map-slug>/map.md`; create each decision ticket as one file under `.scratch/<map-slug>/issues/NN-<slug>.md` (blocking via `Blocked by: NN, NN` lines — see the local tracker doc's "Wayfinding operations" section).
 
@@ -41,9 +42,10 @@ Every wayfinder effort is a **local markdown effort** under `.scratch/<map-slug>
 
 Research branches (`research/<name>`) are throwaway — created during wayfinder charting to stage investigation findings, never merged. The findings are written as a Markdown file; the branch serves only to stage that file.
 
+- **Findings file**: `.scratch/<map-slug>/research/<topic>.md` — where `<map-slug>` is the effort's slug and `<topic>` a short kebab-case name. Tracked with the effort: committed to `feature/<map-slug>`, excluded from `main` at the dev→main hop, archived with the effort.
 - **No branch plan needed** for any operation on a `research/<name>` branch — it is throwaway by definition and never merges
 - Create: `git checkout -b research/<name> feature/<map-slug>`
-- Write findings as a Markdown file
+- Write findings to `.scratch/<map-slug>/research/<topic>.md`
 - Commit the findings file to the map's feature branch (NOT to the research branch)
 - Delete: `git branch -D research/<name>` after the ticket is resolved (force delete — it was never meant to be merged)
 
@@ -53,8 +55,8 @@ Prototype worktrees are temporary — created from the feature branch to answer 
 
 ### Naming
 
-- **Worktree directory**: `.scratch/<map-slug>/prototype/proto-<short-name>` (e.g. `.scratch/user-auth/prototype/proto-login-ui`)
-- **Temporary branch**: `feature/<map-slug>--proto-<short-name>` (e.g. `feature/user-auth--proto-login-ui`)
+- **Worktree directory**: `.scratch/<map-slug>/prototype/proto-<short-name>`
+- **Temporary branch**: `feature/<map-slug>--proto-<short-name>`
 - Each prototype gets a unique branch name — this enables parallel prototypes from the same feature branch
 
 ### Create

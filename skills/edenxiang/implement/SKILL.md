@@ -7,7 +7,7 @@ description: "Implement a piece of work based on a spec or set of tickets, in a 
 
 ## Setup
 
-1. **Find the correct branch** (per wayfinder-git's `/implement` session start): read the ticket body for `**Branch:** feature/<map-slug>`; if present, `git checkout feature/<map-slug>` (no branch plan needed — the branch already exists). If the ticket has no branch field, read `map.md`'s `## Notes` for `Branch: feature/<map-slug>`. If neither is found, treat it as a standalone ticket and follow the normal session-start branching rules (create `feature/<slug>` from `dev` with a branch plan).
+1. **Find the correct branch** (per wayfinder-git's `/implement` session start): read the ticket body for `**Branch:** feature/<map-slug>`; if present, `git checkout feature/<map-slug>` (no branch plan needed — the branch already exists). If the ticket has no branch field, read `map.md`'s `## Notes` for `Branch: feature/<map-slug>`. If neither is found, treat it as a standalone ticket and follow the normal session-start branching rules (create a `feature/<map-slug>` branch from `dev` with a branch plan).
 2. Ensure the effort branch is current: `git pull origin feature/<map-slug>` (or `git fetch` + check) if a remote exists.
 
 ## Worktree isolation
