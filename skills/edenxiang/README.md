@@ -35,6 +35,7 @@
 | teach | `2ab9580` | 原版复制，未魔改 | 插件独立 | 无 | `2ab9580` |
 | writing-great-skills | `2ab9580` | 原版复制，未魔改 | 插件独立 | 无 | `2ab9580` |
 | xhon-workflows | 自创（无上游来源） | 策略 skill：branching（main←dev←feature/*、分支计划、merge 流程、.scratch 排除）、wayfinder-git（.scratch 布局、implements/ 独立）、quality-standards（6 点格式、质量标准） | 自创策略层 | — | — |
+| butler | 自创（重写自 XhonSkills butler） | 单次全自动执行器：`/butler work on <map-slug>` → 决策票波次 fanout（subagent 并行，need-user 阶段后传达）→ 整体审查 → spec → tickets → 生成 workflow.js 跑 implement。不含跨会话 registry | 自创编排层 | — | — |
 
 ## 同步适配流程
 
